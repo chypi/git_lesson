@@ -11,9 +11,13 @@ git config --global user.name "name"
 git config --global user.email "email address"
 
 git add		# stagging
+git add .	# add everything
+git add file_name	# add file named "file_name"
 git commit [-m]	# committing -m for one ligne message, if -m ommitted editor in "git config core.editor" is launched
 git status	# checking the files status of the repo
 
 git log [-oneline]	# checking what have been done
 
+git dif 		# see differences before staging 
+git diff --staged	# see differences after staging & before committing
 
