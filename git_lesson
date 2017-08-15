@@ -1,4 +1,4 @@
-git essentials course from Daniel Chen
+#####		git essentials course from Daniel Chen
 
 commands:
 
@@ -44,4 +44,25 @@ git checkout HEAD~1 file_name	# revert the file to the previous state (add & com
 git reset --hard	# panic button: reset back the repo to the last committed state (before staging)
 git reset HEAD file_name	# reset back the file "file_name" to the last committed state (after staging, so, repo has to be staged)
 git reset afe30f4e file_name	# reset back the file 'file_name" to the afe30f4e committed state (after staging, so, repo has to be staged)
+
+#####		.GITIGNORE
+
+# to track empty folders, add a .girkeep file in it
+# if files have to be ignored (not tracked), place a .gitignore file in the repo's root folder.
+# patterns can be used in .gitignore file in place of file name
+git add -f file_name	# force to track file_name despite of .gitignore file rules
+
+#####		REMOTE
+
+git remote add origin https://github.com/chypi/git_lesson.git	# define the remote "origin" url (https)
+git remote set-url origin git@github.com:chypi/git_lesson.git	# define/change the remote "origin" url (ssh)
+git push origin master		# push <where> <what> : to <remote "origin"> <local "master">
+git remote -v	# list the "fetch" and "push" urls
+
+
+
+
+
+
+
 
