@@ -7,8 +7,8 @@ git status
 
 git config --list
 
-git config user.name "name"
-git config user.email "email address"
+git config --global user.name "name"
+git config --global user.email "email address"
 
 git add		# stagging
 git commit [-m]	# committing -m for one ligne message, if -m ommitted editor in "git config core.editor" is launched
