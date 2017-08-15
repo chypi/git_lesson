@@ -1,0 +1,19 @@
+git essentials course from Daniel Chen
+
+commands:
+
+git init
+git status
+
+git config --list
+
+git config user.name "name"
+git config user.email "email address"
+
+git add		# stagging
+git commit [-m]	# committing -m for one ligne message, if -m ommitted editor in "git config core.editor" is launched
+git status	# checking the files status of the repo
+
+git log [-oneline]	# checking what have been done
+
+
