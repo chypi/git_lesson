@@ -2,6 +2,8 @@ git essentials course from Daniel Chen
 
 commands:
 
+#####		CONFIGURATION
+
 git init
 git status
 
@@ -10,26 +12,36 @@ git config --list
 git config --global user.name "name"
 git config --global user.email "email address"
 
+#####		COMMITTING
+
 git add		# stagging
 git add .	# add everything
 git add file_name	# add file named "file_name"
 git commit [-m]	# committing -m for one ligne message, if -m ommitted editor in "git config core.editor" is launched
 git status	# checking the files status of the repo
-
 git log [-oneline]	# checking what have been done
+
+#####		GIT DIFF
 
 git dif 		# see differences before staging 
 git diff --staged	# see differences after staging & before committing
 git diff HEAD~1		# see differences between the current version (HEAD) and one (~1) back
 git diff af30f4e	# see differences between the current version and the numbered version found by "git log"
 
+#####		GIT CHECKOUT:
+
 git checkout		# revert back to a different stage
 git checkout HEAD~1	# revert back one stage back
 git checkout HEAD file_name	# revert back file "file_name"  one stage back
 git checkout af30f4e	# without a file name (have a try to read the git alert message)
+# "git checkout master" to quitt the "detached header" mode 
 # git checkout has to be staged & committed in order to be effective
+git chechout master file_name	# revert the file "file_name" to the last committed state (i.e. if a file has been deleted)
+git checkout HEAD~1 file_name	# revert the file to the previous state (add & commit have to be done)
 
+#####		GIT RESET:
 
-
-
+git reset --hard	# panic button: reset back the repo to the last committed state (before staging)
+git reset HEAD file_name	# reset back the file "file_name" to the last committed state (after staging, so, repo has to be staged)
+git reset afe30f4e file_name	# reset back the file 'file_name" to the afe30f4e committed state (after staging, so, repo has to be staged)
 
